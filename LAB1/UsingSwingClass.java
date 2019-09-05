@@ -5,23 +5,25 @@ public class UsingSwingClass {
 	public static void main(String[] args) {
 		UsingSwingClass lab1 = new UsingSwingClass();
 		short operators[] = lab1.askValues();
-		System.out.println(operators[0]);
-		double sum = lab1.calculate(operators[0], operators[1], operators[2], operators[3]); 
+		
+		float sum = lab1.calculate(operators[0], operators[1], operators[2], operators[3]); 
 		System.out.println(sum);
 		JOptionPane.showMessageDialog(null, "the sum is : " + sum , "Results", JOptionPane.PLAIN_MESSAGE );
 		System.exit(0);
 	}
-	public double calculate(short numberI, short numberJ, short numberN, short numberM) {
+	public float calculate(short numberI, short numberJ, short numberN, short numberM) {
 		try {
-			double sum = 0;
+			float sum = 0;
 		// short i = numberI;
 		short j = numberJ;
-		System.out.println(numberI);
+	
 		while (numberI < numberN) {
 			j = numberJ;
 			while (j < numberM) {
-				sum += (numberI / j) / (numberI - 3);
-				System.out.print((numberI / j) / (numberI - 3));
+				// For the result to represent a floating-point number, 
+				//one of the operands must also represent a floating-point number:
+				double up = (double)numberI / j; 
+				sum += (float)up / (numberI - 3);
 				j++;
 			}
 			numberI++;
