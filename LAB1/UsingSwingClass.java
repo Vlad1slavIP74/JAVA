@@ -58,7 +58,7 @@ public class UsingSwingClass {
 			return new short[] {numberI, numberJ, numberN, numberM};
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			JOptionPane.showMessageDialog(null, e, "title", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null, e, "title for Error", JOptionPane.PLAIN_MESSAGE);
 			System.exit(1);
 		}
 		return null;
