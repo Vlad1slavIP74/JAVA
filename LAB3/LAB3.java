@@ -15,8 +15,8 @@ public class LAB3 {
     String[] words;
     public static void main(String[] args)  throws IOException  {
         LAB3 lab3 = new LAB3();
-        String location = lab3.getLocation();
         try {
+            String location = lab3.getLocation();
             Scanner fileInOneString = lab3.readFile(location);    
             int countWords = lab3.getCount();
             String[] words = lab3.getWords(countWords);
@@ -96,22 +96,23 @@ public class LAB3 {
     public void display (HashMap<String, Integer> dataToDisplay) {
         JFrame window = new JFrame("title");
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        window.setSize(200, 200);
+        window.setSize(200, 250);
         window.setLocationRelativeTo(null);
         
         int size = dataToDisplay.size();
         Object[][] word = new Object [size][size];
-        Object[] count = new Object [size];
+        Object[] count = {"Words", "Count"};
         int i = 0;
         for(Map.Entry<String, Integer> item : dataToDisplay.entrySet()) {
             word[i][0] = item.getKey();
             word[i][1] = item.getValue();         
-         count[i] = "";
+        //  count[i] = "";
          i++;
         }
 
         JTable table = new JTable(word, count);
         window.add(new JScrollPane(table));
         window.setVisible(true);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
