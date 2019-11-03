@@ -37,39 +37,3 @@ public class LAB4 {
         Arrays.sort(sportEquipment, new SortByPrice());
     }
 }
-
-class SportEquipment {
-    String type;
-    Integer price;
-    Integer count;
-    String appointment;
-    String material;
-
-    SportEquipment(String type, Integer price, Integer count, String appointment, String material) {
-        this.type = type;
-        this.price = price;
-        this.count = count;
-        this.appointment = appointment;
-        this.material = material;
-    }
-    public String toString() {
-        return this.type + " " +  this.price +
-         " " +  this.appointment + " " + this.material + " " + this.count;
-    }
-}
-
-class SortByPrice implements Comparator<SportEquipment> {
-    public int compare (SportEquipment first, SportEquipment second) {
-        return  second.price - first.price;
-    }
-}
-// case insensitive order
-class SortByType implements Comparator<SportEquipment> {
-    public int compare (SportEquipment first, SportEquipment second) {
-        int res = String.CASE_INSENSITIVE_ORDER.compare(second.type, first.type);
-        if (res == 0) {
-            res = second.type.compareTo(first.type);
-        }
-        return res;
-    }
-}
