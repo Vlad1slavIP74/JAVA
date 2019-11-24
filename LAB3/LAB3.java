@@ -10,6 +10,7 @@ import java.util.Map;
 import java.io.FileReader;
 import java.util.Scanner;
 
+// Задано текст та масив слів. Підрахувати у скількох реченнях зустрічається кожне слово масиву.
 
 public class LAB3 {
     String[] words;
