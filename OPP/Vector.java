@@ -3,9 +3,6 @@ package lab2;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Created by Andrew on 18-Sep-16.
- */
 public class Vector {
 
     int[] data;
