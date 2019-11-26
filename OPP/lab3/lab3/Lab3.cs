@@ -13,7 +13,7 @@ class MainClass
 {
 public static void Main (string[] args)
 {
-Console.WriteLine ("Lab 4 started");
+Console.WriteLine ("Lab  3 started");
 int n = 5;
 Data data = new Data(n);
 ThreadFunctions t = new ThreadFunctions (data);
@@ -29,7 +29,7 @@ t3.Priority = ThreadPriority.Highest;
 t1.Start();
 t2.Start();
 t3.Start();
-t1.Join ();
+t1.Join ();     // Метод Join блокирует выполнение вызвавшего его потока до тех пор, пока не завершится поток, для которого был вызван данный метод
 t2.Join ();
 t3.Join ();
 Console.WriteLine ("Lab 4 finished");

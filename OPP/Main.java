@@ -18,11 +18,11 @@ public class Main {
         t3.setName("T3");
         t3.setPriority(Thread.NORM_PRIORITY);
 
-        t1.start();
+        t1.start(); // запускаю поток. викликаючи його метод run
         t2.start();
         t3.start();
 
-        t1.join();
+        t1.join(); // очікую завершення потоків
         t2.join();
         t3.join();
 
